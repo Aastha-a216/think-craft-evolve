@@ -99,4 +99,66 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
   }
+
+  /* ===== Background system ===== */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.97 0.005 280 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.97 0.005 280 / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+  }
+  .bg-vignette {
+    background:
+      radial-gradient(ellipse 100% 60% at 50% 0%, transparent 0%, oklch(0.14 0.005 280 / 0.6) 100%),
+      radial-gradient(ellipse 100% 60% at 50% 100%, transparent 0%, oklch(0.14 0.005 280 / 0.7) 100%);
+  }
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.35;
+    will-change: transform;
+  }
+  .orb-blue {
+    width: 520px; height: 520px;
+    top: -120px; right: -120px;
+    background: radial-gradient(circle, oklch(0.75 0.18 250 / 0.55), transparent 70%);
+    animation: orbFloat 18s ease-in-out infinite;
+  }
+  .orb-violet {
+    width: 420px; height: 420px;
+    bottom: -100px; left: -100px;
+    background: radial-gradient(circle, oklch(0.65 0.2 300 / 0.45), transparent 70%);
+    animation: orbFloat 22s ease-in-out -6s infinite reverse;
+  }
+  .orb-cyan {
+    width: 360px; height: 360px;
+    top: 40%; left: 55%;
+    background: radial-gradient(circle, oklch(0.78 0.14 220 / 0.3), transparent 70%);
+    animation: orbFloat 26s ease-in-out -10s infinite;
+  }
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, -30px) scale(1.08); }
+  }
+  .dot {
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 9999px;
+    background: oklch(0.75 0.15 250 / 0.6);
+    box-shadow: 0 0 12px oklch(0.75 0.15 250 / 0.5);
+    animation: dotFloat 8s ease-in-out infinite;
+  }
+  .dot-a { top: 18%; left: 12%; }
+  .dot-b { top: 32%; right: 18%; width: 4px; height: 4px; animation-delay: -2s; }
+  .dot-c { top: 62%; left: 22%; animation-delay: -4s; }
+  .dot-d { bottom: 18%; right: 24%; width: 5px; height: 5px; animation-delay: -1s; }
+  .dot-e { top: 78%; left: 70%; width: 3px; height: 3px; animation-delay: -3s; }
+  @keyframes dotFloat {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-14px); opacity: 1; }
+  }
 }
+
