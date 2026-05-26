@@ -53,17 +53,32 @@ function Index() {
         <div className="mx-auto max-w-6xl grid md:grid-cols-[1fr_2fr] gap-12">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">[ About ]</p>
           <div>
-            <p className="font-serif text-2xl md:text-3xl leading-snug">
-              Selected work across product thinking, UX, research, and content strategy.
+            <p className="font-serif text-2xl md:text-3xl leading-snug mb-8">
+              I'm a product-minded designer and digital thinker working at the intersection of UI/UX design, content strategy, and structured research.
             </p>
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
+              <p>
+                I focus on how users understand information, how decisions are shaped, and how digital systems communicate clearly and effectively.
+              </p>
+              <p>
+                My work blends UX design for intuitive interfaces, content strategy to simplify complex ideas, product research to understand user behavior, and frontend execution for real-world delivery.
+              </p>
+              <p>
+                I've built and contributed to projects across sustainability commerce, accessibility-first news systems, fraud detection dashboards, and safety-tech — always focusing on clarity, usability, and structured experience design.
+              </p>
+              <p className="text-foreground/80 italic">
+                I enjoy working where design, structure, and communication meet — where clarity transforms into meaningful digital experiences.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-2 mt-8">
-              {["Research", "UX Strategy", "Content Thinking", "Frontend Execution"].map((t) => (
+              {["UX Design", "Product Thinking", "Research", "Content Strategy", "Frontend Execution"].map((t) => (
                 <span key={t} className="text-xs glass rounded-full px-3 py-1.5">{t}</span>
               ))}
             </div>
           </div>
         </div>
       </section>
+
 
       {/* WORK */}
       <section id="work" className="px-6 py-20 border-t border-white/5">
@@ -73,7 +88,7 @@ function Index() {
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">[ Selected Projects ]</p>
               <h2 className="font-serif text-4xl md:text-5xl">Recent work</h2>
             </div>
-            <span className="text-xs text-muted-foreground">02 / case studies</span>
+            <span className="text-xs text-muted-foreground">05 / case studies</span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -93,7 +108,32 @@ function Index() {
               tags={["Dashboard UX", "Feedback Loops", "Data Viz", "Systems"]}
               to="/work/smart-mess"
             />
+            <ProjectCard
+              index="03"
+              title="Raksha Bandhan Suraksha App"
+              category="Product · Safety-Tech UX"
+              description="NCC State-Level Award concept — a predictive personal safety system with voice-triggered distress detection and tiered multi-channel emergency alerts."
+              tags={["Safety-Tech", "Voice UX", "Emergency Flows", "Concept"]}
+              to="/work/raksha"
+            />
+            <ProjectCard
+              index="04"
+              title="Credit Card Fraud Detection"
+              category="Product · Enterprise Dashboard"
+              description="Enterprise analytics dashboard translating dense fraud signals into severity-led, decision-first flows for operators reviewing alerts at scale."
+              tags={["Enterprise UX", "Analytics", "Decision Design", "Anomaly Viz"]}
+              to="/work/fraud"
+            />
+            <ProjectCard
+              index="05"
+              title="Echo News — Accessibility Audio"
+              category="Product · Accessibility UX"
+              description="Audio-first, conversational news platform designed for elderly users, accessibility needs, and multitasking listeners — inclusive by architecture."
+              tags={["Accessibility", "Voice-First", "Inclusive Design", "Audio UX"]}
+              to="/work/echo-news"
+            />
           </div>
+
         </div>
       </section>
 
