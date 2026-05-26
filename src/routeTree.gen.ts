@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkSmartMessRouteImport } from './routes/work.smart-mess'
+import { Route as WorkBinwahRouteImport } from './routes/work.binwah'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkSmartMessRoute = WorkSmartMessRouteImport.update({
+  id: '/work/smart-mess',
+  path: '/work/smart-mess',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkBinwahRoute = WorkBinwahRouteImport.update({
+  id: '/work/binwah',
+  path: '/work/binwah',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/binwah': typeof WorkBinwahRoute
+  '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/binwah': typeof WorkBinwahRoute
+  '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/binwah': typeof WorkBinwahRoute
+  '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/work/binwah' | '/work/smart-mess'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/work/binwah' | '/work/smart-mess'
+  id: '__root__' | '/' | '/work/binwah' | '/work/smart-mess'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkBinwahRoute: typeof WorkBinwahRoute
+  WorkSmartMessRoute: typeof WorkSmartMessRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/smart-mess': {
+      id: '/work/smart-mess'
+      path: '/work/smart-mess'
+      fullPath: '/work/smart-mess'
+      preLoaderRoute: typeof WorkSmartMessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/binwah': {
+      id: '/work/binwah'
+      path: '/work/binwah'
+      fullPath: '/work/binwah'
+      preLoaderRoute: typeof WorkBinwahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkBinwahRoute: WorkBinwahRoute,
+  WorkSmartMessRoute: WorkSmartMessRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
