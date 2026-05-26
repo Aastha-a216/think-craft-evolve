@@ -11,6 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkSmartMessRouteImport } from './routes/work.smart-mess'
+import { Route as WorkRakshaRouteImport } from './routes/work.raksha'
+import { Route as WorkFraudRouteImport } from './routes/work.fraud'
+import { Route as WorkEchoNewsRouteImport } from './routes/work.echo-news'
 import { Route as WorkBinwahRouteImport } from './routes/work.binwah'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +26,21 @@ const WorkSmartMessRoute = WorkSmartMessRouteImport.update({
   path: '/work/smart-mess',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkRakshaRoute = WorkRakshaRouteImport.update({
+  id: '/work/raksha',
+  path: '/work/raksha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkFraudRoute = WorkFraudRouteImport.update({
+  id: '/work/fraud',
+  path: '/work/fraud',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkEchoNewsRoute = WorkEchoNewsRouteImport.update({
+  id: '/work/echo-news',
+  path: '/work/echo-news',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkBinwahRoute = WorkBinwahRouteImport.update({
   id: '/work/binwah',
   path: '/work/binwah',
@@ -32,30 +50,61 @@ const WorkBinwahRoute = WorkBinwahRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/work/binwah': typeof WorkBinwahRoute
+  '/work/echo-news': typeof WorkEchoNewsRoute
+  '/work/fraud': typeof WorkFraudRoute
+  '/work/raksha': typeof WorkRakshaRoute
   '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/work/binwah': typeof WorkBinwahRoute
+  '/work/echo-news': typeof WorkEchoNewsRoute
+  '/work/fraud': typeof WorkFraudRoute
+  '/work/raksha': typeof WorkRakshaRoute
   '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/work/binwah': typeof WorkBinwahRoute
+  '/work/echo-news': typeof WorkEchoNewsRoute
+  '/work/fraud': typeof WorkFraudRoute
+  '/work/raksha': typeof WorkRakshaRoute
   '/work/smart-mess': typeof WorkSmartMessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/binwah' | '/work/smart-mess'
+  fullPaths:
+    | '/'
+    | '/work/binwah'
+    | '/work/echo-news'
+    | '/work/fraud'
+    | '/work/raksha'
+    | '/work/smart-mess'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/binwah' | '/work/smart-mess'
-  id: '__root__' | '/' | '/work/binwah' | '/work/smart-mess'
+  to:
+    | '/'
+    | '/work/binwah'
+    | '/work/echo-news'
+    | '/work/fraud'
+    | '/work/raksha'
+    | '/work/smart-mess'
+  id:
+    | '__root__'
+    | '/'
+    | '/work/binwah'
+    | '/work/echo-news'
+    | '/work/fraud'
+    | '/work/raksha'
+    | '/work/smart-mess'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   WorkBinwahRoute: typeof WorkBinwahRoute
+  WorkEchoNewsRoute: typeof WorkEchoNewsRoute
+  WorkFraudRoute: typeof WorkFraudRoute
+  WorkRakshaRoute: typeof WorkRakshaRoute
   WorkSmartMessRoute: typeof WorkSmartMessRoute
 }
 
@@ -75,6 +124,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkSmartMessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/raksha': {
+      id: '/work/raksha'
+      path: '/work/raksha'
+      fullPath: '/work/raksha'
+      preLoaderRoute: typeof WorkRakshaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/fraud': {
+      id: '/work/fraud'
+      path: '/work/fraud'
+      fullPath: '/work/fraud'
+      preLoaderRoute: typeof WorkFraudRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/echo-news': {
+      id: '/work/echo-news'
+      path: '/work/echo-news'
+      fullPath: '/work/echo-news'
+      preLoaderRoute: typeof WorkEchoNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/binwah': {
       id: '/work/binwah'
       path: '/work/binwah'
@@ -88,6 +158,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   WorkBinwahRoute: WorkBinwahRoute,
+  WorkEchoNewsRoute: WorkEchoNewsRoute,
+  WorkFraudRoute: WorkFraudRoute,
+  WorkRakshaRoute: WorkRakshaRoute,
   WorkSmartMessRoute: WorkSmartMessRoute,
 }
 export const routeTree = rootRouteImport
