@@ -22,7 +22,7 @@ export function SiteFooter() {
             <a href="mailto:aasthasrivastav627@gmail.com" className="glass glass-hover rounded-full px-5 py-2.5 inline-flex w-fit gap-2">
               <span>Email</span><span className="text-muted-foreground">↗</span>
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="glass glass-hover rounded-full px-5 py-2.5 inline-flex w-fit gap-2">
+            <a href="https://www.linkedin.com/in/aastha-srivastava12/" target="_blank" rel="noreferrer" className="glass glass-hover rounded-full px-5 py-2.5 inline-flex w-fit gap-2">
               <span>LinkedIn</span><span className="text-muted-foreground">↗</span>
             </a>
           </div>
