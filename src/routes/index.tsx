@@ -34,7 +34,7 @@ function Index() {
                 Aastha Srivastava
               </h1>
               <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-xl">
-                Product + UI/UX + Content & Research thinker — building thoughtful digital experiences at the intersection of strategy, design, and storytelling.
+                Product Developer <span className="text-foreground/40">|</span> Frontend Engineer <span className="text-foreground/40">|</span> Data Analyst
               </p>
             </div>
           </div>
@@ -54,27 +54,140 @@ function Index() {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">[ About ]</p>
           <div>
             <p className="font-serif text-2xl md:text-3xl leading-snug mb-8">
-              I'm a product-minded designer and digital thinker working at the intersection of UI/UX design, content strategy, and structured research.
+              Analytical and engineering-focused Product Developer specializing in robust frontend architecture, end-to-end interactive digital workflows, and data-driven business intelligence.
             </p>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
               <p>
-                I focus on how users understand information, how decisions are shaped, and how digital systems communicate clearly and effectively.
+                I translate complex functional specifications into highly performant user-facing applications by combining professional web technologies and Power BI pipeline optimization with modern AI-assisted engineering and automated development environments.
               </p>
               <p>
-                My work blends UX design for intuitive interfaces, content strategy to simplify complex ideas, product research to understand user behavior, and frontend execution for real-world delivery.
+                My work spans frontend engineering, interactive dashboards, and data visualization — from component architecture and responsive layout execution to real-time forecasting and operational intelligence systems.
               </p>
               <p>
-                I've built and contributed to projects across sustainability commerce, accessibility-first news systems, fraud detection dashboards, and safety-tech — always focusing on clarity, usability, and structured experience design.
+                I've built and contributed to projects across sustainability commerce, accessibility-first news systems, fraud detection dashboards, and safety-tech — always focusing on clarity, performance, and structured data flow.
               </p>
               <p className="text-foreground/80 italic">
-                I enjoy working where design, structure, and communication meet — where clarity transforms into meaningful digital experiences.
+                I enjoy working where engineering, data, and interface meet — where structured systems become measurable business intelligence.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mt-8">
-              {["UX Design", "Product Thinking", "Research", "Content Strategy", "Frontend Execution"].map((t) => (
+              {["Frontend Engineering", "Power BI", "React", "Data Analytics", "Product Development", "AI-Assisted Workflows"].map((t) => (
                 <span key={t} className="text-xs glass rounded-full px-3 py-1.5">{t}</span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="px-6 py-20 border-t border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">[ Capabilities ]</p>
+              <h2 className="font-serif text-4xl md:text-5xl">Skills & Stack</h2>
+            </div>
+            <span className="text-xs text-muted-foreground">04 / categories</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                i: "01",
+                t: "Frontend Engineering",
+                items: ["HTML5", "CSS3", "JavaScript ES6+", "React Foundational Ecosystem", "Responsive Layout Execution", "Component Architecture", "Layout Optimization"],
+              },
+              {
+                i: "02",
+                t: "Data Analytics & Business Intelligence",
+                items: ["Microsoft Power BI", "Real-Time Forecasting", "Data Visualization", "Interactive Analytics Dashboards", "Operational Metrics", "Threat & Pattern Modeling"],
+              },
+              {
+                i: "03",
+                t: "Product & UX",
+                items: ["Product Thinking", "UI/UX Design", "Information Architecture", "Design Systems", "Prototyping", "User Research"],
+              },
+              {
+                i: "04",
+                t: "Workflow & Tooling",
+                items: ["AI-Assisted Engineering", "Git & Version Control", "Automated Dev Environments", "Figma", "Chart.js", "Content & SEO Strategy"],
+              },
+            ].map((c) => (
+              <div key={c.i} className="glass glass-hover rounded-2xl p-8 h-full flex flex-col">
+                <div className="flex items-start justify-between mb-8">
+                  <span className="text-xs text-muted-foreground">({c.i})</span>
+                  <span className="text-xs text-muted-foreground">Skillset</span>
+                </div>
+                <h3 className="font-serif text-2xl mb-5">{c.t}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {c.items.map((it) => (
+                    <span key={it} className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-muted-foreground border border-white/5">{it}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience" className="px-6 py-20 border-t border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">[ Timeline ]</p>
+              <h2 className="font-serif text-4xl md:text-5xl">Experience</h2>
+            </div>
+            <span className="text-xs text-muted-foreground">03 / roles</span>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                title: "Frontend Developer & UI/UX Designer",
+                company: "MindSeekers",
+                time: "2025 – Present",
+                bullets: [
+                  "Execute frontend code synchronization to refine component rendering and manage state trees across product surfaces.",
+                  "Translate design specs into responsive, accessible React components with consistent design-system tokens.",
+                  "Collaborate on UX flows and ship production-ready interfaces aligned with brand and product goals.",
+                ],
+              },
+              {
+                title: "Data Analytics Intern",
+                company: "Zidio Development",
+                time: "June 2025 – August 2025",
+                bullets: [
+                  "Engineered real-time data ingestion models and dynamic predictive forecasting systems to identify high-impact business metrics.",
+                  "Designed and deployed interactive corporate intelligence dashboards using Microsoft Power BI to extract operational performance data patterns.",
+                  "Transformed raw multi-dimensional data pipelines into actionable visual trends, reducing decision latency for business stakeholders.",
+                ],
+              },
+              {
+                title: "Freelance Product & Frontend Designer",
+                company: "Independent",
+                time: "2024 – Present",
+                bullets: [
+                  "Designed and shipped frontend interfaces and product experiences for early-stage brands and capstone builds.",
+                  "Owned end-to-end delivery — from research and IA to component build-out and content strategy.",
+                ],
+              },
+            ].map((e) => (
+              <div key={e.title + e.company} className="glass glass-hover rounded-2xl p-8">
+                <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
+                  <div>
+                    <h3 className="font-serif text-2xl">{e.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{e.company}</p>
+                  </div>
+                  <span className="text-xs text-muted-foreground">{e.time}</span>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                  {e.bullets.map((b, i) => (
+                    <li key={i} className="flex gap-3"><span className="text-foreground/40">—</span><span>{b}</span></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -103,9 +216,9 @@ function Index() {
             <ProjectCard
               index="02"
               title="Smart Mess — Hostel Feedback"
-              category="Product · Dashboard UX"
-              description="Student-focused feedback + analytics system. Designed feedback loops, data visualization UX, and a clear system architecture for everyday use."
-              tags={["Dashboard UX", "Feedback Loops", "Data Viz", "Systems"]}
+              category="Frontend · Analytics UI"
+              description="Programmed the web frontend using native HTML5, CSS3, and JavaScript, integrating dynamic Chart.js engines to render real-time feedback analytics and trend visualizations."
+              tags={["HTML5/CSS3", "JavaScript", "Chart.js", "Dashboard UX"]}
               to="/work/smart-mess"
             />
             <ProjectCard
@@ -119,9 +232,9 @@ function Index() {
             <ProjectCard
               index="04"
               title="Credit Card Fraud Detection"
-              category="Product · Enterprise Dashboard"
-              description="Enterprise analytics dashboard translating dense fraud signals into severity-led, decision-first flows for operators reviewing alerts at scale."
-              tags={["Enterprise UX", "Analytics", "Decision Design", "Anomaly Viz"]}
+              category="Frontend · BI Dashboard"
+              description="Engineered the interface logic and built operational user dashboards that translate live threat patterns into severity-led decision flows, structured on Power BI data models."
+              tags={["Frontend Logic", "Power BI", "Threat Modeling", "Decision UX"]}
               to="/work/fraud"
             />
             <ProjectCard
