@@ -232,9 +232,9 @@ function Index() {
             <ProjectCard
               index="04"
               title="Credit Card Fraud Detection"
-              category="Product · Enterprise Dashboard"
-              description="Enterprise analytics dashboard translating dense fraud signals into severity-led, decision-first flows for operators reviewing alerts at scale."
-              tags={["Enterprise UX", "Analytics", "Decision Design", "Anomaly Viz"]}
+              category="Frontend · BI Dashboard"
+              description="Engineered the interface logic and built operational user dashboards that translate live threat patterns into severity-led decision flows, structured on Power BI data models."
+              tags={["Frontend Logic", "Power BI", "Threat Modeling", "Decision UX"]}
               to="/work/fraud"
             />
             <ProjectCard
