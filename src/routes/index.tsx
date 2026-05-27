@@ -216,9 +216,9 @@ function Index() {
             <ProjectCard
               index="02"
               title="Smart Mess — Hostel Feedback"
-              category="Product · Dashboard UX"
-              description="Student-focused feedback + analytics system. Designed feedback loops, data visualization UX, and a clear system architecture for everyday use."
-              tags={["Dashboard UX", "Feedback Loops", "Data Viz", "Systems"]}
+              category="Frontend · Analytics UI"
+              description="Programmed the web frontend using native HTML5, CSS3, and JavaScript, integrating dynamic Chart.js engines to render real-time feedback analytics and trend visualizations."
+              tags={["HTML5/CSS3", "JavaScript", "Chart.js", "Dashboard UX"]}
               to="/work/smart-mess"
             />
             <ProjectCard
