@@ -34,7 +34,7 @@ function Index() {
                 Aastha Srivastava
               </h1>
               <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-xl">
-                Product + UI/UX + Content & Research thinker — building thoughtful digital experiences at the intersection of strategy, design, and storytelling.
+                Product Developer <span className="text-foreground/40">|</span> Frontend Engineer <span className="text-foreground/40">|</span> Data Analyst
               </p>
             </div>
           </div>
